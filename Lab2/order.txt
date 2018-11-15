@@ -1,0 +1,3 @@
+Total number of apple : 1628
+Total number of banana : 522
+Total number of orange : 458
