@@ -18,6 +18,8 @@
       </div>
     </div>
 
+    <br />
+
     <!--  -->
     <div class="container">
       <div class="row">
@@ -70,13 +72,25 @@
 
       <br />
 
-
       <div class="row">
         <div class="col" style="font-size: 150%">
           Payment Mode: <i><strong><?php echo $_GET["payment"] ?></strong></i>
         </div>
         <div class="col" style="font-size: 150%" align="right">
           Overall Total: <i><strong>$<?php echo $_GET["total"] ?></strong></i>
+        </div>
+      </div>
+
+      <br />
+
+      <!--  -->
+      <div class="container">
+        <div class="row">
+          <form action="index.html">
+            <button class="btn btn-dark" type="submit" class="btn btn-success" id="newOrder">
+              Make New Order
+            </button>
+          </form>
         </div>
       </div>
 
