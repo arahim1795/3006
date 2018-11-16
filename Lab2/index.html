@@ -6,13 +6,15 @@
     <script type="text/javascript" src="js/order.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <title> Fruits </title>
-
+    <!-- Title in Tab  -->
+    <title>
+      Fruits
+    </title>
   </head>
 
   <body>
 
-    <!--  -->
+    <!-- Page Header -->
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3" align="center">
@@ -23,10 +25,10 @@
 
     <div class="container">
 
-      <!--  -->
+      <!-- Forms  -->
       <form action="server.php" method="post">
 
-        <!--  -->
+        <!-- Form: Name -->
         <div class="form-group row">
           <label class="col-sm-2 col-form-label col-form-label-lg">
             <strong>Name</strong>
@@ -36,7 +38,7 @@
           </div>
         </div>
 
-        <!-- Table Form -->
+        <!-- Form: List of Fruits -->
         <div class="form-group" align="center">
           <label class="col-form-label col-form-label-lg">
             <strong>List</strong>
@@ -44,7 +46,7 @@
 
           <table class="table table-bordered table-striped table-sm" id="orderList">
 
-            <!-- Headings -->
+            <!-- Headings of Fruits List -->
             <thead class="thead-dark" align="center">
               <tr>
                 <th scope="col">Fruit</th>
@@ -53,7 +55,7 @@
               </tr>
             </thead>
 
-            <!-- Entries -->
+            <!-- Entries of Fruits List -->
             <tbody>
               <tr>
                 <td>Apple</td>
@@ -84,14 +86,14 @@
                   <strong>Subtotal</strong>
                 </td>
                 <td>
-                  <input type="text" class="form-control" id="total" name="total" size="1" value="0.00" disabled/>
+                  <input type="text" class="form-control form-control-sm" name="total" id="total" size="1" placeholder="0.00" disabled/>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!--  -->
+        <!-- Form: Payment Mode Radio Buttons -->
         <div class="form-group row">
           <label class="col-form-label col-form-label-lg">
             <strong>Payment Mode</strong>
@@ -114,11 +116,11 @@
           </div>
         </div>
 
-        <!-- Radio Buttons -->
-
         <br />
 
+        <!-- Form: Reset & Submission Buttons -->
         <div class="form-actions">
+          <!-- Reload of form needed to clear 'active' state of radio buttons -->
           <button type="reset" class="btn btn-light" onClick="window.location.reload()">
             Reset
           </button>

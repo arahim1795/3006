@@ -3,7 +3,8 @@ var correctA = false, correctB = false, correctO = false;
 var correctName = false;
 var reE = /^$/;
 
-
+// Upon Load, get total item/form, disable Submit button until certain
+// conditions are met
 document.addEventListener("DOMContentLoaded", function(event) {
   total = document.getElementById('total');
 
@@ -12,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   button.disabled = true;
 });
 
+// Ensure that only whole numbers (exclude negative) are passed in as arguments,
+// else alert user with apt warning
 function validateNumber(event) {
   var re = /^[\d]+$/;
   var id = event.id;
@@ -37,7 +40,7 @@ function validateNumber(event) {
     event.blur();
     calcTotal();
   } else {
-    alert("Invalid Input. Only Numbers [0-9] are Allowed.");
+    alert("Invalid Input. Only Numbers [0-9] are Allowed");
 
     if (id == "apple") {
       correctA = false;
@@ -55,12 +58,15 @@ function validateNumber(event) {
   validateForm();
 }
 
+// Ensure that only certain combination of characters is acceptable as names
+// If names are valid, a trimming function is called to remove potential
+// pursuing and trailing whitespace characters are remove
 function validateName(event) {
   var re = /^[a-zA-Z -]+$/;
   var re2 = /^[ -]+$/;
 
   if (re2.test(event.value)) {
-    alert("Invalid Name.\nName cannot be exclusively a permutation of spaces and/or dashes");
+    alert("Invalid Name.\nName cannot be exclusively a combination of spaces and/or dashes");
     correctName = false;
     event.value = '';
     event.focus();
@@ -80,6 +86,7 @@ function validateName(event) {
   validateForm();
 }
 
+// Calculate total cost of list of fruits to be purchased
 function calcTotal() {
   var apple, banana, orange;
   apple = document.getElementById('apple').value;
@@ -95,6 +102,7 @@ function calcTotal() {
   total.value = runningTotal.toFixed(2);
 }
 
+// Enable Submit form/button after webpage is amply validated
 function validateForm() {
   var button = document.getElementById('btnSub');
   button.disabled = !(correctA && correctB && correctO && correctName);

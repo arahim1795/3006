@@ -3,13 +3,15 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/modification.css"/>
+    <!-- Title in Tab  -->
     <title>
       Thank You
     </title>
   </head>
 
   <body>
-    <!--  -->
+
+    <!-- Page Header -->
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3" align="center">
@@ -20,8 +22,9 @@
 
     <br />
 
-    <!--  -->
+    <!-- Start of Receipt -->
     <div class="container">
+      <!-- Title & Customer Name -->
       <div class="row">
         <div class="col" style="font-size: 150%">
           <u><strong>Receipt</strong></u>
@@ -33,10 +36,11 @@
 
       <br />
 
-      <!--  -->
+      <!-- Ordered Fruits List -->
       <div class="row">
         <table class="table table-bordered table-striped table-sm" id="orderList">
-          <!--  -->
+
+          <!-- Headings of Ordered List -->
           <thead class="thead-dark" align="center">
             <tr>
                 <th>Item</th>
@@ -46,7 +50,7 @@
             </tr>
           </thead>
 
-          <!--  -->
+          <!-- Entries of Ordered List  -->
           <tbody>
             <tr>
               <td>Apples</td>
@@ -72,22 +76,24 @@
 
       <br />
 
+      <!-- Payment Mode & Overall Total -->
       <div class="row">
         <div class="col" style="font-size: 150%">
-          Payment Mode: <i><strong><?php echo $_GET["payment"] ?></strong></i>
+          Payment Mode: <strong><?php echo $_GET["payment"] ?></strong>
         </div>
         <div class="col" style="font-size: 150%" align="right">
-          Overall Total: <i><strong>$<?php echo $_GET["total"] ?></strong></i>
+          Overall Total: <strong>$<?php echo $_GET["total"] ?></strong>
         </div>
       </div>
 
       <br />
 
-      <!--  -->
+      <!-- Create New Order Button (i.e. to place new orders)  without the
+      need to press 'Back' -->
       <div class="container">
         <div class="row">
           <form action="index.html">
-            <button class="btn btn-dark" type="submit" class="btn btn-success" id="newOrder">
+            <button class="btn btn-success" type="submit" id="newOrder">
               Make New Order
             </button>
           </form>
