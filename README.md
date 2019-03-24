@@ -11,3 +11,4 @@ To add ESLINT to proj:
   you're set
 
   alt: easy mode: standard https://standardjs.com/
+  alt: eslint-config-standard
